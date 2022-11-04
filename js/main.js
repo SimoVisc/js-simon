@@ -32,7 +32,7 @@ const questions = setTimeout(function (){
     for(let i=1; i<5; i++){
         prompt("inserirsci il numero che hai visto precedentemente")
        }
-}, 3000)
+}, 30000)
 
 
 
