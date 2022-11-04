@@ -20,14 +20,19 @@ document.getElementById("simonSays").innerHTML=  listNumbers
 let second= 30;
 const timer = setInterval (function (){
     if(second === 0){
-        clearInterval(timer)
+        clearInterval("simonSays")
     } else{
         console.log(second);
         second--;
     }
 }, 30000);
 
+// chiedo all'utente di inseirire , uno alla volta, i numeri che ha visto precedentemente
+const questions = setTimeout(function (){
+    for(let i=1; i<5; i++){
+        prompt("inserirsci il numero che hai visto precedentemente")
+       }
+}, 3000)
 
 
-// Dopo 30 secondi i numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
-// Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
+
