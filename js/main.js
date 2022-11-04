@@ -4,3 +4,14 @@ function getRndInteger (min, max) {
     return Math.floor(Math.random()*(max-min+1))+min;
 }
 
+// creo un array di 5 numeri da 1 a 100 senza duplicati
+const listNumbers= [];
+while (listNumbers.length<= 5){
+   const numberRandom = getRndIteger(1,100)
+  // se   
+}
+
+Visualizzare in pagina 5 numeri casuali da 1 a 100 senza duplicati.
+Da lì parte un timer di 30 secondi.
+Dopo 30 secondi i numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
+Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
