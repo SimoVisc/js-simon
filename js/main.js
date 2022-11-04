@@ -13,6 +13,7 @@ while (listNumbers.length<5){
     listNumbers.push(numberRandom)
   }
 }
+// stampo nella pagina HTML l'arrey dei numeri
 document.getElementById("simonSays").innerHTML=  listNumbers
 
 
