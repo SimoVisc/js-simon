@@ -16,7 +16,18 @@ while (listNumbers.length<5){
 // stampo nella pagina HTML l'arrey dei numeri
 document.getElementById("simonSays").innerHTML=  listNumbers
 
+// parte il timer di 30 secondi
+let second= 30;
+const timer = setInterval (function (){
+    if(second === 0){
+        clearInterval(timer)
+    } else{
+        console.log(second);
+        second--;
+    }
+}, 30000);
 
-// Da lì parte un timer di 30 secondi.
+
+
 // Dopo 30 secondi i numeri scompaiono e l'utente deve inserire, uno alla volta, i numeri che ha visto precedentemente, tramite il prompt().
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
