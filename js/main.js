@@ -8,7 +8,10 @@ function getRndInteger (min, max) {
 const listNumbers= [];
 while (listNumbers.length<= 5){
    const numberRandom = getRndIteger(1,100)
-  // se   
+  // se il numero non è presente nell'arrey allora lo pusho
+  if(listNumbers.includes(numberRandom)=== false){
+    listNumbers.push(numberRandom)
+  }
 }
 
 Visualizzare in pagina 5 numeri casuali da 1 a 100 senza duplicati.
