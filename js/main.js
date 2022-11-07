@@ -6,6 +6,8 @@ function getRndInteger (min, max) {
 
 // creo un array di 5 numeri da 1 a 100 senza duplicati
 const listNumbers= [];
+const numbersElement = document.getElementById("simonSays")
+
 while (listNumbers.length<5){
    const numberRandom = getRndInteger(1,100)
   // se il numero non è presente nell'arrey allora lo pusho
@@ -14,25 +16,32 @@ while (listNumbers.length<5){
   }
 }
 // stampo nella pagina HTML l'arrey dei numeri
-document.getElementById("simonSays").innerHTML=  listNumbers
+numbersElement.innerHTML= listNumbers
 
 // parte il timer di 30 secondi
-let second= 30;
-const timer = setInterval (function (){
-    if(second === 0){
+
+ const timer = 3
+setInterval (function (){
+     if(second === 0){
         clearInterval("simonSays")
-    } else{
-        console.log(second);
-        second--;
-    }
-}, 30000);
+     } else{
+         console.log(second);
+         second--;
+     }
+ }, 1000);
 
 // chiedo all'utente di inseirire , uno alla volta, i numeri che ha visto precedentemente
-const questions = setTimeout(function (){
+setTimeout(function (){
+    numbersElement.remove();
+    const numbersGuessed= [];
     for(let i=1; i<5; i++){
-        prompt("inserirsci il numero che hai visto precedentemente")
-       }
-}, 30000)
+        const listNumbers = Number(prompt("inserirsci il numero che hai visto precedentemente"));
+      if(listNumbers.includes(numberRandom) && !numbersGuessed.includes(numberRandom)){
+        numbersGuessed.push(numberRandom)
+      }
+    }
+})
+
 
 
 
